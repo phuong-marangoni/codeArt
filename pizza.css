@@ -1,0 +1,133 @@
+body {
+  background: grey;
+}
+
+.crust {
+  height: 200px;
+  width: 200px;
+  background: #B67037;
+  color: black;
+  position: relative;
+  animation: art;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes art {
+  0%{ background:  #B67037; left: 0px; top: 0px; border-radius: 50% 50% 50% 50%;}
+  25%{ background: #B67037; left: 50%; top: 0px; border-radius: 50% 50% 50% 50%;}
+  50%{ background: #B67037; left: 50%; top: 35%; border-radius: 50% 50% 50% 50%;}
+  75%{ background: #B67037; left: 0px; top: 35%; border-radius: 50% 50% 50% 50%;}
+  100%{ background:  #B67037; left: 0px; top: 0px; border-radius: 50% 50% 50% 50%;}
+}
+
+.rim {
+  position: absolute;
+  border-radius: 50%;
+  height: 90%;
+  width: 90%;
+  top: 5%; /*Need this to center inner layer*/
+  left: 5%; /*Need this to center inner layer*/
+  background: #7B2005;
+  z-index: 3;
+}
+
+.cheese {
+  position: absolute;
+  border-radius: 50%;
+  height: 95%;
+  width: 95%;
+  top: 2.5%; /*Need this to center inner layer*/
+  left: 2.5%; /*Need this to center inner layer*/
+  background: #E7BC57;
+  z-index: 3;
+}
+
+.pepperoni, .pepperoni2, .pepperoni3, .pepperoni4, .pepperoni5, .pepperoni6, .pepperoni7, .pepperoni8, .pepperoni9, .pepperoni10, .pepperoni11, .pepperoni12 {
+  position: absolute; /* need this to sit inside cheese */
+  border-radius: 50%;
+  background: #891A08;
+  height: 10%;
+  width: 10%;
+  z-index: 4;
+}
+
+.pepperoni{
+  top: 30%;
+  left: 40%;
+}
+
+.pepperoni2{
+  top: 10%;
+  left: 68%;
+}
+
+.pepperoni3{
+  top: 60%;
+  left: 47%;
+}
+
+.pepperoni4{
+  top: 10%;
+  left: 30%;
+}
+
+.pepperoni5{
+  top: 65%;
+  left: 10%;
+}
+
+.pepperoni6{
+  top: 30%;
+  left: 10%;
+}
+
+.pepperoni7{
+  top: 38%;
+  left: 72%;
+}
+
+.pepperoni8{
+  top: 80%;
+  left: 68%;
+}
+
+.pepperoni9{
+  top: 85%;
+  left: 40%;
+}
+
+.pepperoni10{
+  top: 45%;
+  left: 25%;
+}
+
+.pepperoni11{
+  top: 52%;
+  left: 88%;
+}
+
+.pepperoni12{
+  top: 80%;
+  left: 68%;
+}
+
+.eye {
+  position: absolute; /* need this to sit inside cheese */
+  border-radius: 50%;
+  background: #000;
+  height: 5%;
+  width: 5%;
+  z-index: 5;
+}
+
+.eye1 {
+  top: 70%;
+  left: 36%
+}
+
+.eye2 {
+  top: 70%;
+  right: 36%
+}

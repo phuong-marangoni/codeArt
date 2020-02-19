@@ -1,0 +1,228 @@
+body {
+  background: #C9FBC2;
+}
+
+.box {
+  position: relative;  /* Place box relative to normal position which is top left being 1st div in body*/
+  width: 150;
+  height: 200px;
+  display: block;  /*This plus margin auto will center the box*/
+  margin: auto;  /*This plus margin auto will center the box*/
+  animation: cupMove;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cupMove {
+  0% {
+    top: 0%;
+    left: 0%;
+  }
+
+  25% {
+    top: 0%;
+    left: 20%;
+  }
+
+  50% {
+    top: 50%;
+    left: 20%;
+  }
+
+  75% {
+    top: 50%;
+    left: 20%;
+  }
+
+  100% {
+    top: 0%;
+    left: 0%;
+  }
+}
+
+.cup {
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  width: 45%;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 120px solid #CACACA;
+  transform: rotate(180deg);
+}
+
+.tea {
+  position: absolute;
+  top: 5%;
+  left: -22%;
+  padding: 1.5px;
+  width: 75%;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 100px solid #FFBBD2;
+  z-index: 2;
+}
+
+.air {
+  position: absolute;
+  top: 5%;
+  left: -26.5%;
+  padding: 1.5px;
+  width: 75%;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 114px solid #DAD8D9;
+  z-index: 1;
+}
+
+.boba {
+  position: absolute;
+  height: 6%;
+  width: 8%;
+  background: #271A16;
+  border-radius: 50%;
+  z-index: 3;
+  animation: appear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.boba1 {
+  top: 70%;
+  left: 30%;
+}
+
+.boba2 {
+  top: 75%;
+  left: 50%;
+}
+
+.boba3 {
+  top: 90%;
+  left: 35%;
+}
+
+.boba4 {
+  top: 79%;
+  left: 35%;
+}
+
+.boba5 {
+  top: 80%;
+  left: 63%;
+}
+
+.boba6 {
+  top: 90%;
+  left: 60%;
+}
+
+.boba7 {
+  top: 70%;
+  left: 63%;
+}
+
+.boba8 {
+  top: 90%;
+  left: 45%;
+}
+
+.straw {
+  position: absolute;
+  top: 0.5%;
+  left: 40%;
+  width: 7%;
+  height: 48%;
+  background: #A0D0FA;
+}
+
+.sLine {
+  position: absolute;
+  width: 9%;
+  height: 1%;
+  left: 39%;
+  background: #8DCAFF;
+}
+
+.strawLines1 {
+  top: 10%;
+}
+
+.strawLines2 {
+  top: 12%;
+}
+
+.strawLines3 {
+  top: 14%;
+}
+
+.strawLines4 {
+  top: 16%;
+}
+
+.lid {
+  position: absolute;
+  top: 34%;
+  left: 3%;
+  height: 5%;
+  width: 95%;
+  background: #CACACA;
+  border: 1px solid #BEBBBB;
+}
+
+.lidtop {
+  position: absolute;
+  top: 32.5%;
+  left: 15%;
+  height: 1%;
+  width: 70%;
+  background: #CACACA;
+  border: 1px solid #BEBBBB;
+}
+
+.eye {
+  position: absolute;
+  top: 85%;
+  width: 3%;
+  height: 2%;
+  background: black;
+  border-radius: 50%;
+}
+
+.eyeL {
+  left: 42%;
+}
+
+.eyeR {
+  right: 42%;
+}
+
+.mouth {
+  position: absolute;
+  top: 84%;
+  left: 47.5%;
+  width: 3.5%;
+  height: 3%;
+  border: solid 1px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 50%/5px 5px 0 0;
+  transform: rotate(180deg);
+}

@@ -1,0 +1,26 @@
+
+html, body {
+  background: #FF96B1;
+}
+
+.cake {
+  position: relative;
+  animation: cake;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cake {
+  0% { left: 5%; top: 0%; }
+  10% { left: 10%; top: 20%; }
+  20% { left: 20%; top: 0%; }
+  30% { left: 30%; top: 20%;}
+  40% { left: 40%; top: 0%;}
+  50% { left: 50%; top: 20%; }
+  60% { left: 40%; top: 0%; }
+  70% { left: 30%; top: 20%;}
+  80% { left: 20%; top: 0%;}
+  90% { left: 10%; top: 20%;}
+  100% { left: 0%; top: 0%;}
+}
