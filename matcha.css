@@ -1,0 +1,420 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --img-width: 300px;
+  --img-height: 300px;
+  --c-bowl: #756F6A;
+  --c-bowl-ridge: #756F6A;
+  --c-border: #A69C97;
+  --c-whisk: #CF8634;
+  --c-whisk-details: #6F2E00;
+  --c-matcha: #376D27;
+  --c-eyes-mouth: #000;
+}
+
+body {
+  background: #A2D5A6;
+}
+
+.canvas {
+  position: relative;
+  width: var(--img-width);
+  height: var(--img-height);
+  /* Temp border only -- Remove later*/
+  border: 1px dashed #000;
+  /*add animation later*/
+}
+
+.bowl {
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  background: var(--c-bowl);
+  width: 70%;
+  height: 40%;
+  border-radius: 0 0 50% 50%;
+  border: 1px solid var(--c-border);
+  z-index: 2
+}
+
+.bowl-ridge {
+  position: absolute;
+  top: 40%;
+  left: 13%;
+  background: var(--c-bowl-ridge);
+  width: 70%;
+  height: 20%;
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+  z-index: 3;
+}
+
+.bowl-bottom {
+  position: absolute;
+  top: 84%;
+  left: 33%;
+  width: 30%;
+  height: 8%;
+  background: var(--c-bowl);
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+}
+
+.matcha {
+  position: absolute;
+  top: 43%;
+  left: 17%;
+  background: var(--c-matcha);
+  width: 62%;
+  height: 15%;
+  border-radius: 50%;
+  box-shadow: 0 -5px #000;
+  z-index: 4;
+}
+
+.whisk-handle {
+  position: absolute;
+  top: 15%;
+  left: 17%;
+  background: var(--c-whisk);
+  width: 18%;
+  height: 30%;
+  border-radius: 20% 20% 0 0;
+  transform: rotate(-20deg);
+  z-index: 5;
+}
+
+.whisk-handle__details:before, .whisk-handle__details::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk-details);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 6;
+}
+
+.whisk-handle__details {
+  /* Need this to be relative for before/after*/
+  position: relative;
+  top: 40%;
+  left: 20%;
+  background: var(--c-whisk-details);
+  width: 20%;
+  height: 2%;
+  transform: rotate(-20deg);
+  z-index: 6;
+}
+
+.whisk-handle__details:before {
+  top: -150%;
+}
+
+.whisk-handle__details::after {
+  top: 150%;
+}
+
+.whisk-bristle1::before, .whisk-bristle1::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 7;
+}
+
+.whisk-bristle1 {
+  position: relative;
+  top: 45%;
+  left: 19%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(105deg);
+  z-index: 5;
+}
+
+.whisk-bristle1:before {
+  top: -200%;
+}
+
+.whisk-bristle1::after {
+  top: 200%;
+}
+
+.whisk-bristle2::before, .whisk-bristle2::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle2 {
+  position: relative;
+  top: 45%;
+  left: 22%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(100deg);
+  z-index: 5;
+}
+
+.whisk-bristle2:before {
+  top: -200%;
+}
+
+.whisk-bristle2::after {
+  top: 200%;
+}
+
+.whisk-bristle3::before, .whisk-bristle3::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle3 {
+  position: relative;
+  top: 45%;
+  left: 25%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(95deg);
+  z-index: 5;
+}
+
+.whisk-bristle3:before {
+  top: -200%;
+}
+
+.whisk-bristle3::after {
+  top: 200%;
+}
+
+.whisk-bristle4::before, .whisk-bristle4::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle4 {
+  position: relative;
+  top: 44.5%;
+  left: 28%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(85deg);
+  z-index: 5;
+}
+
+.whisk-bristle4:before {
+  top: -200%;
+}
+
+.whisk-bristle4::after {
+  top: 200%;
+}
+
+.whisk-bristle5::before, .whisk-bristle5::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle5 {
+  position: relative;
+  top: 43%;
+  left: 31%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(76deg);
+  z-index: 5;
+}
+
+.whisk-bristle5:before {
+  top: -200%;
+}
+
+.whisk-bristle5::after {
+  top: 200%;
+}
+
+.whisk-bristle6::before, .whisk-bristle6::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle6 {
+  position: relative;
+  top: 42%;
+  left: 33%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(70deg);
+  z-index: 5;
+}
+
+.whisk-bristle6:before {
+  top: -200%;
+}
+
+.whisk-bristle6::after {
+  top: 200%;
+}
+
+.whisk-bristle7::before, .whisk-bristle7::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle7 {
+  position: relative;
+  top: 40%;
+  left: 35.5%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(60deg);
+  z-index: 5;
+}
+
+.whisk-bristle7:before {
+  top: -200%;
+}
+
+.whisk-bristle7::after {
+  top: 200%;
+}
+
+.whisk-bristle8::before, .whisk-bristle8::after {
+  content: "";
+  position: absolute;
+  background: var(--c-whisk);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.whisk-bristle8 {
+  position: relative;
+  top: 39%;
+  left: 37%;
+  background: var(--c-whisk);
+  width: 10%;
+  height: 0.5%;
+  transform: rotate(45deg);
+  z-index: 5;
+}
+
+.whisk-bristle8:before {
+  top: -200%;
+}
+
+.whisk-bristle8::after {
+  top: 200%;
+}
+
+.eye {
+  position: relative;
+  top: 73%;
+  left: 44%;
+  background: var(--c-eyes-mouth);
+  width: 2%;
+  height: 2%;
+  border-radius: 50%;
+  z-index: 7;
+}
+
+.eye::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  left: 300%;
+  top: 0;
+}
+
+.eyeblink {
+  position: relative;
+  top: 68%;
+  left: 44%;
+  background: var(--c-bowl);
+  width: 3%;
+  height: 2.5%;
+  border-radius: 50%;
+  z-index: 8;
+
+  animation: blink;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+}
+
+.eyeblink::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  left: 200%;
+  top: 0;
+}
+
+@keyframes blink {
+  0% { top: 68%; left: 43.5%;}
+  25% { top: 69.5%; left: 43.5%;}
+  50% { top: 71%; left: 43.5%;}
+  75% { top: 69.5%; left: 43.5%;}
+  100% { top: 68%; left: 43.5%;}
+}
+
+.mouth {
+  position: absolute;
+  top: 80%;
+  left: 46%;
+  width: 4%;
+  height: 3%;
+  border: solid 1px var(--c-eyes-mouth);
+  border-color: var(--c-eyes-mouth) transparent transparent transparent;
+  border-radius: 50%/7px 7px 0 0;
+  transform: rotate(180deg);
+  z-index: 7;
+}

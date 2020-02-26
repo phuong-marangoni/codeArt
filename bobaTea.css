@@ -4,7 +4,7 @@ body {
 
 .box {
   position: relative;  /* Place box relative to normal position which is top left being 1st div in body*/
-  width: 150;
+  width: 150px;
   height: 200px;
   display: block;  /*This plus margin auto will center the box*/
   margin: auto;  /*This plus margin auto will center the box*/
