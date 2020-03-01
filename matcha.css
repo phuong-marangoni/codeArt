@@ -24,9 +24,6 @@ body {
   position: relative;
   width: var(--img-width);
   height: var(--img-height);
-  /* Temp border only -- Remove later*/
-  border: 1px dashed #000;
-  /*add animation later*/
 }
 
 .bowl {
@@ -88,7 +85,7 @@ body {
   z-index: 5;
 }
 
-.whisk-handle__details:before, .whisk-handle__details::after {
+.whisk-handle__details::before, .whisk-handle__details::after {
   content: "";
   position: absolute;
   background: var(--c-whisk-details);

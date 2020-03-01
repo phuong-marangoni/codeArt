@@ -8,37 +8,6 @@ body {
   height: 200px;
   display: block;  /*This plus margin auto will center the box*/
   margin: auto;  /*This plus margin auto will center the box*/
-  animation: cupMove;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes cupMove {
-  0% {
-    top: 0%;
-    left: 0%;
-  }
-
-  25% {
-    top: 0%;
-    left: 20%;
-  }
-
-  50% {
-    top: 50%;
-    left: 20%;
-  }
-
-  75% {
-    top: 50%;
-    left: 20%;
-  }
-
-  100% {
-    top: 0%;
-    left: 0%;
-  }
 }
 
 .cup {
