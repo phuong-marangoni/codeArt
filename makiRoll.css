@@ -1,0 +1,537 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-bg: #7EC8D3;
+  --c-plate: #fff;
+  --c-plate-shadow: #DFDFDD;
+  --c-seaweed: #151414;
+  --c-rice: #FFFCE5;
+  --c-fish: #F35B21;
+  --c-cucumber: #1B6911;
+  --c-cucumber-center: #CFF9A3;
+  --c-egg: #EEB419;
+  --c-wasabi: #9DB75D;
+  --c-ginger: #FAC97D;
+}
+
+body {
+  background: var(--c-bg);
+}
+
+.canvas {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin: auto;
+  
+}
+
+.plate {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  height: 200px;
+  width: 200px;
+  background: var(--c-plate);
+}
+
+.plate::before {
+  content: "";
+  position: absolute;
+  top: 46.3%;
+  left: -58.8%;
+  width: 110.2%;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid var(--c-plate-shadow);
+  transform: rotate(90deg);
+}
+
+.plate::after {
+  content: "";
+  position: absolute;
+  top: 46.3%;
+  right: -58.8%;
+  width: 110.2%;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid var(--c-plate-shadow);
+  transform: rotate(-90deg)
+}
+
+.plate-layer2 {
+  position: relative;
+  top: -52%;
+  left: 15%;
+  height: 200px;
+  width: 200px;
+  background: var(--c-plate);
+  border-top: 1px solid var(--c-plate-shadow);
+  border-bottom: 1px solid var(--c-plate-shadow);
+}
+
+.plate-layer2::before  {
+  content: "";
+  position: absolute;
+  top: -5.2%;
+  left: -7.5%;
+  width: 115%;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10.1px solid var(--c-plate);
+  transform: rotate(180deg);
+  z-index: 1;
+}
+
+.plate-layer2::after {
+  content: "";
+  position: absolute;
+  top: 100.8%;
+  right: -7.5%;
+  width: 115%;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10.1px solid var(--c-plate);
+}
+
+.sushi {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: var(--c-seaweed);
+  border-radius: 50%;
+}
+
+.roll1 {
+  position: relative;
+  top: -107%;
+  left: 38%;
+  box-shadow: 0 20px 2.5rem var(--c-seaweed);
+  z-index: 3;
+}
+
+.roll1::before {
+  position: absolute;
+  left: -100%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.roll1::after {
+  position: absolute;
+  right: -100%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.roll2 {
+  position: relative;
+  top: -106%;
+  left: 38%;
+  box-shadow: 0 20px 2.5rem var(--c-seaweed);
+  z-index: 3;
+}
+
+.roll2::before {
+  position: absolute;
+  left: -100%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.roll2::after {
+  position: absolute;
+  right: -100%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.rice {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-image: radial-gradient(var(--c-rice) 50%, var(--c-seaweed) 110%);
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.r1 {
+  top: -145.5%;
+  left: 39.9%;
+}
+
+.r1::before {
+  position: absolute;
+  left: -120.5%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.r1::after {
+  position: absolute;
+  right: -119.5%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.r2 {
+  top: -141%;
+  left: 39.7%;
+}
+
+.r2::before {
+  position: absolute;
+  left: -120.5%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.r2::after {
+  position: absolute;
+  right: -119.5%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.fish {
+  position: relative;
+  height: 10px;
+  width: 20px;
+  z-index: 5;
+  /* Salmon effect*/
+  background-image: repeating-linear-gradient(var(--c-fish) 1%, var(--c-rice) 30%);
+  border-radius: 25%;
+}
+
+.fish1 {
+  top: -173%;
+  left: 46%;
+  transform: rotate(30deg);
+}
+
+.fish1::before {
+  position: absolute;
+  top: 310%;
+  left: -295%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(-40deg);
+}
+
+.fish1::after {
+  position: absolute;
+  top: -280%;
+  right: -230%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(-20deg);
+}
+
+.fish2 {
+  top: -153%;
+  left: 46%;
+  transform: rotate(30deg);
+}
+
+.fish2::before {
+  position: absolute;
+  top: 310%;
+  left: -295%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(90deg);
+}
+
+.fish2::after {
+  position: absolute;
+  top: -280%;
+  right: -230%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(-50deg);
+}
+
+.cucumber {
+  position: relative;
+  height: 8px;
+  width: 10px;
+  border: 0.1px solid var(--c-cucumber-center);
+  background-image: linear-gradient(to right, var(--c-cucumber-center), var(--c-cucumber));
+  z-index: 6;
+}
+
+.c1 {
+  top: -177%;
+  left: 46%;
+  transform: rotate(60deg);
+}
+
+.c1::before {
+  position: absolute;
+  top: 650%;
+  left: -350%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  border: inherit;
+  z-index: inherit;
+  transform: rotate(90deg);
+}
+
+.c1::after {
+  position: absolute;
+  top: -780%;
+  right: -295%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  border: inherit;
+  z-index: inherit;
+  transform: rotate(90deg);
+}
+
+.c2 {
+  top: -162%;
+  left: 46%;
+  transform: rotate(60deg);
+}
+
+.c2::before {
+  position: absolute;
+  top: 650%;
+  left: -350%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  border: inherit;
+  z-index: inherit;
+  transform: rotate(90deg);
+}
+
+.c2::after {
+  position: absolute;
+  top: -600%;
+  right: -320%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  border: inherit;
+  z-index: inherit;
+  transform: rotate(90deg);
+}
+
+.egg {
+  position: relative;
+  height: 8px;
+  width: 15px;
+  background: var(--c-egg);
+  border-radius: 15%;
+  z-index: 4;
+}
+
+.e1 {
+  top: -183%;
+  left: 43%;
+  transform: rotate(-90deg);
+}
+
+.e1::before {
+  position: absolute;
+  top: 800%;
+  left: -30%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(-40deg);
+}
+
+.e1::after {
+  position: absolute;
+  top: -580%;
+  right: -30%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(-20deg);
+}
+
+.e2 {
+  top: -165%;
+  left: 43%;
+  transform: rotate(-90deg);
+}
+
+.e2::before {
+  position: absolute;
+  top: 850%;
+  left: 50%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(-40deg);
+}
+
+.e2::after {
+  position: absolute;
+  top: -580%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+  transform: rotate(20deg);
+}
+
+.wasabi {
+  position: relative;
+  top: -207%;
+  left: 69%;
+  height: 10px;
+  width: 20px;
+  background: var(--c-wasabi);
+  border-radius: 50%;
+  box-shadow: 0 7.5px 0.5rem var(--c-seaweed);
+  z-index: 8;
+}
+
+.wasabi::before {
+  position: absolute;
+  top: -20%;
+  right: 5%;
+  content: "";
+  height: inherit;
+  width: 80%;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.wasabi::after {
+  position: absolute;
+  top: 40%;
+  right: -10%;
+  content: "";
+  height: 120%;
+  width: 120%;
+  background: inherit;
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.ginger {
+  position: relative;
+  height: 20px;
+  width: 30px;
+  background-image: linear-gradient(to right, var(--c-plate), var(--c-ginger), var(--c-ginger), var(--c-plate));
+  z-index: 8;
+}
+
+.g1 {
+  top: -212%;
+  left: 52%;
+}
+
+.g1::before {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  z-index: inherit;
+  transform: rotate(45deg);
+}
+
+.g1::after {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  z-index: inherit;
+  transform: rotate(-30deg);
+}
+
+.g2 {
+  top: -218%;
+  left: 57%;
+  transform: rotate(30deg);
+}
