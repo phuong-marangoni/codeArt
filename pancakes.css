@@ -10,8 +10,8 @@
 
   --c-plate: #ECECEC;
   --c-plate-shadow: #CFCDC7;
-  --c-pancake: #FAC465;
-  --c-pancake-shadow: #F8AD53;
+  --c-pancake: #F8AD53;
+  --c-pancake-side: #FAC465;
   --c-syrup: #87470A;
   --c-butter: #FCD461;
   --c-butter-shadow: #F6BD2F;
@@ -27,7 +27,7 @@ body {
   display: block;
   height: 300px;
   width: 300px;
-  border: 1px dashed #000;
+  /*border: 1px dashed #000;*/
 }
 
 .plate {
@@ -69,7 +69,7 @@ body {
 
 .pancake {
   background: var(--c-pancake);
-  box-shadow: 0px 10px var(--c-pancake-shadow);
+  box-shadow: 0px 10px var(--c-pancake-side);
   height: 30px;
   width: 180px;
   border-radius: 50%;
@@ -88,7 +88,7 @@ body {
   top: 56%;
   height: 10px;
   width: inherit;
-  background: var(--c-pancake-shadow);
+  background: var(--c-pancake-side);
   border-radius: 10%;
 }
 
@@ -115,7 +115,7 @@ body {
   top: 56%;
   height: 10px;
   width: inherit;
-  background: var(--c-pancake-shadow);
+  background: var(--c-pancake-side);
   border-radius: 10%;
 }
 
@@ -142,7 +142,7 @@ body {
   top: 56%;
   height: 10px;
   width: inherit;
-  background: var(--c-pancake-shadow);
+  background: var(--c-pancake-side);
   border-radius: 10%;
 }
 
@@ -169,7 +169,7 @@ body {
   top: 56%;
   height: 10px;
   width: inherit;
-  background: var(--c-pancake-shadow);
+  background: var(--c-pancake-side);
   border-radius: 10%;
 }
 
@@ -196,7 +196,7 @@ body {
   top: 56%;
   height: 10px;
   width: inherit;
-  background: var(--c-pancake-shadow);
+  background: var(--c-pancake-side);
   border-radius: 10%;
 }
 
@@ -223,7 +223,7 @@ body {
   top: 56%;
   height: 10px;
   width: inherit;
-  background: var(--c-pancake-shadow);
+  background: var(--c-pancake-side);
   border-radius: 10%;
 }
 
