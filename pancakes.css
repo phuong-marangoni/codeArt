@@ -1,0 +1,354 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Custom CSS Properties */
+:root {
+  --c-bg: #B9FF67;
+
+  --c-plate: #ECECEC;
+  --c-plate-shadow: #CFCDC7;
+  --c-pancake: #FAC465;
+  --c-pancake-shadow: #F8AD53;
+  --c-syrup: #87470A;
+  --c-butter: #FCD461;
+  --c-butter-shadow: #F6BD2F;
+}
+
+body {
+  background: var(--c-bg);
+}
+
+.canvas {
+  position: absolute;
+  margin: auto;
+  display: block;
+  height: 300px;
+  width: 300px;
+  border: 1px dashed #000;
+}
+
+.plate {
+  position: relative;
+  top: 70%;
+  left: 7%;
+  height: 50px;
+  width: 250px;
+  background: var(--c-plate);
+  border-radius: 50%;
+  box-shadow: 0px 20px 1.5rem #242322;
+  z-index: 2;
+}
+
+.plate::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 8%;
+  height: 40px;
+  width: 210px;
+  background: var(--c-plate);
+  border: 2px solid var(--c-plate-shadow);
+  border-radius: inherit;
+  z-index: 2;
+}
+
+.plate::after {
+  position: absolute;
+  content: "";
+  top: 76%;
+  left: 21%;
+  height: 20px;
+  width: 140px;
+  background: var(--c-plate);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.pancake {
+  background: var(--c-pancake);
+  box-shadow: 0px 10px var(--c-pancake-shadow);
+  height: 30px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.p1 {
+  position: relative;
+  top: 53%;
+  left: 18%;
+  z-index: 3;
+}
+
+.p1::before {
+  position: absolute;
+  content: "";
+  top: 56%;
+  height: 10px;
+  width: inherit;
+  background: var(--c-pancake-shadow);
+  border-radius: 10%;
+}
+
+.p1::after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  background: var(--c-pancake);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+
+.p2 {
+  position: relative;
+  top: 38%;
+  left: 19%;
+  z-index: 4;
+}
+
+.p2::before {
+  position: absolute;
+  content: "";
+  top: 56%;
+  height: 10px;
+  width: inherit;
+  background: var(--c-pancake-shadow);
+  border-radius: 10%;
+}
+
+.p2::after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  background: var(--c-pancake);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+
+.p3 {
+  position: relative;
+  top: 24%;
+  left: 18%;
+  z-index: 4;
+}
+
+.p3::before {
+  position: absolute;
+  content: "";
+  top: 56%;
+  height: 10px;
+  width: inherit;
+  background: var(--c-pancake-shadow);
+  border-radius: 10%;
+}
+
+.p3::after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  background: var(--c-pancake);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+
+.p4 {
+  position: relative;
+  top: 10%;
+  left: 17%;
+  z-index: 4;
+}
+
+.p4::before {
+  position: absolute;
+  content: "";
+  top: 56%;
+  height: 10px;
+  width: inherit;
+  background: var(--c-pancake-shadow);
+  border-radius: 10%;
+}
+
+.p4::after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  background: var(--c-pancake);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+
+.p5 {
+  position: relative;
+  top: -4%;
+  left: 17.5%;
+  z-index: 4;
+}
+
+.p5::before {
+  position: absolute;
+  content: "";
+  top: 56%;
+  height: 10px;
+  width: inherit;
+  background: var(--c-pancake-shadow);
+  border-radius: 10%;
+}
+
+.p5::after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  background: var(--c-pancake);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+
+.p6 {
+  position: relative;
+  top: -18%;
+  left: 18%;
+  z-index: 4;
+}
+
+.p6::before {
+  position: absolute;
+  content: "";
+  top: 56%;
+  height: 10px;
+  width: inherit;
+  background: var(--c-pancake-shadow);
+  border-radius: 10%;
+}
+
+.p6::after {
+  position: absolute;
+  content: "";
+  top: 5%;
+  background: var(--c-pancake);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+}
+
+.syrup {
+  background: var(--c-syrup);
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.s1 {
+  position: relative;
+  top: -26%;
+  left: 33.5%;
+  height: 20px;
+  width: 90px;
+  z-index: 5;
+}
+
+.s1::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.s1::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 25%;
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.s2 {
+  position: relative;
+  top: -26.5%;
+  left: 74%;
+  height: 5px;
+  width: 25px;
+  transform: rotate(90deg);
+  z-index: 5;
+}
+
+.s2::before {
+  position: absolute;
+  content: "";
+  left: 128%;
+  height: 6px;
+  width: 20px;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(-10deg);
+}
+
+.s2::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 90%;
+  height: 5px;
+  width: 15px;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(10deg);
+}
+
+.s3 {
+  position: relative;
+  top: -11%;
+  left: 74%;
+  height: 5px;
+  width: 25px;
+  transform: rotate(100deg);
+  z-index: 5;
+}
+
+.s3::before {
+  position: absolute;
+  content: "";
+  top: -150%;
+  left: 58%;
+  height: 5px;
+  width: 20px;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(78deg);
+}
+
+.s3::after {
+  position: absolute;
+  content: "";
+  top: -390%;
+  left: 50%;
+  height: 8px;
+  width: 22px;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(78deg);
+}
+
+.butter {
+  position: relative;
+  top: -35%;
+  left: 55%;
+  height: 8px;
+  width: 25px;
+  background: var(--c-butter);
+  transform: skew(-20deg);
+  border-radius: 25%;
+  box-shadow: 1px 3px var(--c-butter-shadow);
+  z-index: 6;
+}
