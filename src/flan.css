@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =================
+    Custom CSS Properties
+   =================
+*/
+:root {
+
+  --bg: #C8BA9C;
+  --c-plate: #fff;
+  --c-plate-shadow: #AEAEAE;
+  --c-custard: #FCC861;
+  --c-sugar-top: #925600;
+  --c-sugar-top-shadow: #BF7D1D;
+  --c-cream: #FBF5CC;
+  --c-strawberry: #C21515;
+  --c-strawberry-top: #277D0B;
+  --c-strawberry-seeds: #BAB027;
+}
+
+body {
+  background: var(--bg);
+}
+
+.canvas {
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+
+.plate{
+  position: relative;
+  top: 80%;
+  left: 8%;
+  height: 50px;
+  width: 250px;
+  border-radius: 50%;
+  background: var(--c-plate);
+}
+
+.plate::before {
+  position: absolute;
+  content: '';
+  top: 10%;
+  left: 5%;
+  height: 80%;
+  width: 90%;
+  border-radius: inherit;
+  background: inherit;
+  border: 1px solid var(--c-plate-shadow);
+  z-index: 2;
+}
+
+.plate::after {
+  position: absolute;
+  content: '';
+  top: 60%;
+  left:25%;
+  height: 50%;
+  width: 50%;
+  border-radius: 25%;
+  background: inherit;
+}
+
+.custard {
+  position: relative;
+  top: 48%;
+  left: 23%;
+  height: 0;
+  width: 160px;
+  border-bottom: 70px solid var(--c-custard);
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+  z-index: 3;
+}
+
+.custard-bottom {
+  position: relative;
+  top: 44%;
+  left: 23%;
+  height: 23px;
+  width: 160px;
+  background: var(--c-custard);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.sugar-top {
+  position: relative;
+  top: 15%;
+  left: 30.5%;
+  height: 5px;
+  width: 115px;
+  background: var(--c-sugar-top-shadow);
+  z-index: 3;
+}
+
+.sugar-top::before {
+  position: absolute;
+  top: -160%;
+  content: '';
+  height: 23px;
+  width: 115px;
+  background: var(--c-sugar-top-shadow);
+  border-radius: 50%;;
+  z-index: 2;
+}
+
+.sugar-top::after {
+  position: absolute;
+  content: '';
+  top: -250%;
+  height: 23px;
+  width: 115px;
+  background: var(--c-sugar-top);
+  border-radius: 50%;
+  z-index: 3;
+}
+.cream {
+  position: relative;
+  top: 8%;
+  left: 35%;
+  height: 15px;
+  width: 40px;
+  background: var(--c-cream);
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.cream::before {
+  position: absolute;
+  content: '';
+  top: -30%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.cream::after {
+  position: absolute;
+  content: '';
+  top: -50%;
+  left: 18%;
+  height: 70%;
+  width: 50%;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.strawberry {
+  position: relative;
+  top: 27%;
+  left: 73%;
+  height: 25px;
+  width: 15px;
+  border-radius: 45%;
+  background: var(--c-strawberry);
+  z-index: 5;
+}
+
+.strawberry::before {
+  position: absolute;
+  content: '';
+  left: -17%;
+  height: inherit;
+  width: inherit;
+  transform: rotate(-35deg);
+  background: inherit;
+  border-radius: 50%;
+}
+
+.strawberry::after {
+  position: absolute;
+  content: '';
+  top: -10%;
+  left: 18%;
+  height: 5px;
+  width: 1px;
+  background: var(--c-strawberry-top);
+  transform: rotate(-20deg);
+  z-index: 6;
+}
+
+.strawberry-top {
+  position: relative;
+  top: 18.5%;
+  left: 71.5%;
+  height: 5px;
+  width: 15px;
+  background: var(--c-strawberry-top);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  z-index: 6;
+}
+
+.strawberry-top::before {
+  position: absolute;
+  content: '';
+  top: 30%;
+  left: 5%;
+  height: 5px;
+  width: 8px;
+  background: var(--c-strawberry);
+  border-radius: inherit;
+}
+
+.strawberry-top::after {
+  position: absolute;
+  content: '';
+  top: 44%;
+  left: 59.5%;
+  height: 6px;
+  width: 6px;
+  background: var(--c-strawberry);
+  border-radius: inherit;
+}
+
+.seeds {
+  height: 3px;
+  width: 1px;
+  border-radius: 50%;
+  background: var(--c-strawberry-seeds);
+  z-index: 7;
+}
+
+.s1 {
+  position: relative;
+  top: 19%;
+  left: 74.5%;
+  transform: rotate(-15deg);
+}
+
+.s1::before {
+  position: absolute;
+  content: '';
+  left: 450%;
+  height: inherit;
+  width: inherit;
+  background: var(--c-strawberry-seeds);
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.s1::after {
+  position: absolute;
+  content: '';
+  left: -450%;
+  height: inherit;
+  width: inherit;
+  background: var(--c-strawberry-seeds);
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.s2 {
+  position: relative;
+  top: 20%;
+  left: 75%;
+  transform: rotate(-15deg);
+}
+
+.s2::before {
+  position: absolute;
+  content: '';
+  left: 450%;
+  height: inherit;
+  width: inherit;
+  background: var(--c-strawberry-seeds);
+  border-radius: inherit;
+  z-index: inherit;
+}
+
+.s2::after {
+  position: absolute;
+  content: '';
+  left: -450%;
+  height: inherit;
+  width: inherit;
+  background: var(--c-strawberry-seeds);
+  border-radius: inherit;
+  z-index: inherit;
+}
