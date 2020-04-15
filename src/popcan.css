@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =================
+    Custom CSS Properties
+   =================
+*/
+:root {
+  --bg:  #000980;
+  --c-can: #CC0606;
+  --c-top: #9A9A94;
+  --c-top-outline: #BDBDBD;
+  --c-design: #EAEADF;
+}
+
+body {
+  background: var(--bg);
+}
+
+.canvas {
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+  /*border: 1px dashed #000;#*/
+}
+
+.can-bottom, .can-top::before, .can-top::after, .can-opener,
+.can-opener::after, .can-opening {
+  background: var(--c-top);
+  border-radius: 50%;
+  border: 1px solid var(--c-top-outline)
+}
+
+.can-bottom {
+  position: relative;
+  top: 84%;
+  left: 35.2%;
+  content: '';
+  height: 30px;
+  width: 100px;
+  z-index: 1;
+}
+
+.can, .can::before, .can::after {
+    background: var(--c-can);
+}
+
+.can {
+  position: relative;
+  top: 10%;
+  left: 32%;
+  height: 200px;
+  width: 120px;
+  z-index: 2
+}
+
+.can::before {
+  position: absolute;
+  top: 93%;
+  content: '';
+  height: 30px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.can::after {
+  position: absolute;
+  top: -7%;
+  content: '';
+  height: 30px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.can-top {
+  position: relative;
+  top: -62%;
+  left: 33%;
+  height: 6px;
+  width: 112px;
+  background: var(--c-top);
+  border-radius: 10%;
+  z-index: 3;
+}
+
+.can-top::before {
+  position: absolute;
+  content: '';
+  top: -250%;
+  height: 30px;
+  width: 112px;
+  box-shadow: 0 6px var(--c-top);
+}
+
+.can-top::after {
+  position: absolute;
+  top: -154%;
+  left: 3.5%;
+  content: '';
+  height: 25px;
+  width: 103px;
+}
+
+.can-opener {
+  position: relative;
+  top: -66%;
+  left: 44%;
+  height: 18px;
+  width: 40px;
+  border-radius: 40%;
+  z-index: 5;
+}
+
+.can-opener::before {
+  position: absolute;
+  content: '';
+  top: 6%;
+  left: 5%;
+  height: 70%;
+  width: 90%;
+  background: #000;
+  border-radius: inherit;
+}
+
+.can-opener::after {
+  position: absolute;
+  content: '';
+  left: 45%;
+  height: 80%;
+  width: 10%;
+  background: var(--c-top);
+}
+
+.can-opening {
+  position: relative;
+  top: -72.5%;
+  left: 54%;
+  height: 21px;
+  width: 30px;
+  border-radius: 40%;
+  z-index: 4;
+}
+
+.can-design, .can-design::before {
+  background: var(--c-design);
+  width: 120px;
+  z-index: 6;
+}
+
+.can-design {
+  position: relative;
+  top: -60%;
+  left: 32%;
+  height: 60px;
+}
+
+.can-design::before, .can-design::after {
+  position: absolute;
+  content: '';
+  height: 50%;
+  border-radius: 50%;
+}
+
+.can-design::before {
+  top: 72%;
+}
+
+.can-design::after {
+  top: -23%;
+  width: inherit;
+  background: var(--c-can);
+  z-index: 6;
+}
+
+.can-bubbles, .can-bubbles::before, .can-bubbles::after {
+  background: var(--c-design);
+  border-radius: 50%;
+  z-index: 8;
+}
+
+.can-bubbles {
+  position: relative;
+  top: -40%;
+  left: 60%;
+  height: 20px;
+  width: 20px;
+}
+
+.can-bubbles::before {
+  position: absolute;
+  content: '';
+  top: -100%;
+  left: 70%;
+  height: 80%;
+  width: 80%;
+}
+
+.can-bubbles::after {
+  position: absolute;
+  content: '';
+  top: -180%;
+  left: 70%;
+  height: 50%;
+  width: 50%;
+}
