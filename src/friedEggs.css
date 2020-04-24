@@ -1,0 +1,162 @@
+/*
+  ======================
+  Custom CSS Properties
+  ======================
+*/
+:root {
+  --bg: #E99076;
+  --pan: #0D0E0D;
+  --pan-bottom: #464343;
+  --egg-white: #FFF6E0;
+  --egg-cooked: #7F4D12;
+  --egg-yolk: #F0B10C;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+}
+
+.canvas {
+  height: 300px;
+  width: 300px;
+  /*border: 1px dashed #000;*/
+}
+
+.pan, .pan::before {
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.pan::before, .pan-handle::before, .e1::before, .e1::after, .e2::before, .e2::after, .y1::before, .y2::before {
+  position: absolute;
+  content: '';
+}
+
+.pan {
+  position: relative;
+  top: 38%;
+  left: 7%;
+  background: var(--pan);
+  height: 180px;
+  width: 180px;
+}
+
+.pan::before {
+  top: 10%;
+  left: 10%;
+  background: var(--pan-bottom);
+  height: 80%;
+  width: 80%;
+}
+
+.egg-whites, .e1::before, .e1::after, .e2::before, .e2::after {
+  height: 40px;
+  width: 40px;
+  background: var(--egg-white);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.e1 {
+  position: relative;
+  top: 10%;
+  left: 20%;
+}
+
+.e1::before {
+  left: 40%;
+  height: 150%;
+  width: 150%;
+}
+
+.e1::after {
+  top: -40%;
+  left: 30%;
+  height: 110%;
+  width: 110%;
+}
+
+.e2 {
+  position: relative;
+  top: -23%;
+  left: 27%;
+  width: 45px;
+}
+
+.e2::before {
+  left: 50%;
+  height: 150%;
+  width: 150%;
+}
+
+.e2::after {
+  top: -40%;
+  left: 30%;
+  width: 130%;
+}
+
+.yolk {
+  height: 28px;
+  width: 30px;
+  background: var(--egg-yolk);
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.y1 {
+  position: relative;
+  top: -35%;
+  left: 35%;
+}
+
+.y1::before, .y2::before {
+  border-radius: 50%;
+  height: 45%;
+  width: 40%;
+  background: var(--egg-yolk);
+  /* Based off an 18% ratio of the h/w */
+  box-shadow: 1px 1px 0 0 var(--egg-white);
+  transform: rotate(-80deg);
+}
+
+.y1::before {
+  top: 25%;
+  left: 40%;
+}
+
+.y2 {
+  position: relative;
+  top: -21%;
+  left: 32%;
+}
+
+.y2::before {
+  top: 25%;
+  left: 40%;
+}
+
+.pan-handle {
+  position: relative;
+  top: -98%;
+  left: 65%;
+  height: 130px;
+  width: 30px;
+  background: var(--pan);
+  border-radius: 20%;
+  transform: rotate(40deg);
+}
+
+.pan-handle::before {
+  background: var(--bg);
+  top: 5%;
+  left: 27%;
+  height: 14px;
+  width: 10px;
+  border-radius: 40%;
+}
